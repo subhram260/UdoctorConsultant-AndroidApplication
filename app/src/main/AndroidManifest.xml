@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.Udoctor.doctor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Doctor">
+        <activity
+            android:name=".DentalActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EyeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DoctorHome"
+            android:exported="true" />
+        <activity
+            android:name=".HeartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Details_doctor"
+            android:exported="true" />
+        <activity
+            android:name=".patientHome"
+            android:exported="true" />
+        <activity
+            android:name=".homeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".signupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".loginActivity"
+            android:exported="true" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

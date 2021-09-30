@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Doctor</string>
+    <string name="nav_drawer_open">Open Navigation Drawer</string>
+    <string name="nav_drawer_close">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="default_web_client_id" >631754041036-g2khceruu1d916v3jmenub6dm21d9ck8.apps.googleusercontent.com</string>-->
+
+</resources>
