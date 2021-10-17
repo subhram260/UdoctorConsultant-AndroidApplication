@@ -1,5 +1,6 @@
 package com.Udoctor.doctor.Adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -9,12 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.Udoctor.doctor.Details_doctor;
-import com.Udoctor.doctor.DoctorHome;
-import com.Udoctor.doctor.HeartActivity;
 import com.Udoctor.doctor.R;
 import com.squareup.picasso.Picasso;
 
@@ -39,7 +37,7 @@ public class HeartAdapter extends RecyclerView.Adapter<HeartAdapter.MyViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HeartAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull HeartAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         HeartDoctor Hdoctor = list.get(position);
 //        holder.imageHeart.setImageURI(Hdoctor.getImageHeart().toString());
         Picasso.get().load(Hdoctor.getImageHeart())
@@ -54,7 +52,9 @@ public class HeartAdapter extends RecyclerView.Adapter<HeartAdapter.MyViewHolder
 
 
     Intent intent=new Intent(v.getContext(),Details_doctor.class);
+    intent.putExtra("Hdoctor", list.get(position));
     context.startActivity(intent);
+
             }
         });
     }

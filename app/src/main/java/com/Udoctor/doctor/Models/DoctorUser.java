@@ -1,9 +1,10 @@
 package com.Udoctor.doctor.Models;
 
 public class DoctorUser {
-    String profilePic, DoctorName, Doctormail, Doctorpassword, Doctorid, Doctorphone, Doctorgender, DoctorEducation, DoctorAboutSummery, DoctorAddress,type;
+    String profilePic, DoctorName, Doctormail, Doctorpassword, Doctorid, Doctorphone, Doctorgender, DoctorEducation, DoctorAboutSummery, DoctorAddress,type,spelization;
 
-    public DoctorUser(String profilePic, String doctorName, String doctormail, String doctorpassword, String doctorid, String doctorphone, String doctorgender, String doctorEducation, String doctorAboutSummery, String doctorAddress,String type) {
+
+    public DoctorUser(String profilePic, String doctorName, String doctormail, String doctorpassword, String doctorid, String doctorphone, String doctorgender, String doctorEducation, String doctorAboutSummery, String doctorAddress, String type, String spelization) {
         this.profilePic = profilePic;
         DoctorName = doctorName;
         Doctormail = doctormail;
@@ -14,8 +15,10 @@ public class DoctorUser {
         DoctorEducation = doctorEducation;
         DoctorAboutSummery = doctorAboutSummery;
         DoctorAddress = doctorAddress;
-        type=type;
+        this.type = type;
+        this.spelization = spelization;
     }
+
     public DoctorUser(){}
 
     //Signup constructor
@@ -111,5 +114,13 @@ public class DoctorUser {
 
     public void setDoctorAddress(String doctorAddress) {
         DoctorAddress = doctorAddress;
+    }
+
+    public String getSpelization() {
+        return spelization;
+    }
+
+    public void setSpelization(String spelization) {
+        this.spelization = spelization;
     }
 }

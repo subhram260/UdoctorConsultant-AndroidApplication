@@ -1,6 +1,9 @@
 package com.Udoctor.doctor.Adapters;
 
-public class HeartDoctor {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class HeartDoctor implements Parcelable {
     String imageHeart,nameHeart,specialHeart;
 
     public HeartDoctor()
@@ -10,6 +13,24 @@ public class HeartDoctor {
         this.nameHeart = nameHeart;
         this.specialHeart = specialHeart;
     }
+
+    protected HeartDoctor(Parcel in) {
+        imageHeart = in.readString();
+        nameHeart = in.readString();
+        specialHeart = in.readString();
+    }
+
+    public static final Creator<HeartDoctor> CREATOR = new Creator<HeartDoctor>() {
+        @Override
+        public HeartDoctor createFromParcel(Parcel in) {
+            return new HeartDoctor(in);
+        }
+
+        @Override
+        public HeartDoctor[] newArray(int size) {
+            return new HeartDoctor[size];
+        }
+    };
 
     public String getImageHeart() {
         return imageHeart;
@@ -33,5 +54,17 @@ public class HeartDoctor {
 
     public void setSpecialHeart(String specialHeart) {
         this.specialHeart = specialHeart;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(imageHeart);
+        dest.writeString(nameHeart);
+        dest.writeString(specialHeart);
     }
 }

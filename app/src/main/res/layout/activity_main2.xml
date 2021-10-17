@@ -44,6 +44,7 @@
         android:layout_height="78dp"
         android:backgroundTint="#3C9E9D"
         android:text="Doctor"
+        android:onClick="statloginDoctor"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

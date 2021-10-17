@@ -146,34 +146,40 @@ public class homeActivity extends AppCompatActivity {
 //        }
 
         //
-        userref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                //String value = dataSnapshot.getValue(String.class);
-                //Log.d(TAG, "Value is: " + value);
-                //String value = dataSnapshot.getValue(String.class);
-                //Toast.makeText(homeActivity.this,value,Toast.LENGTH_SHORT).show();
-                Users users = dataSnapshot.getValue(Users.class);
-                Picasso.get().load(users.getProfilePic())
-                        .placeholder(R.drawable.rounded)
-                        .into(toolbarimage);
-                Picasso.get().load(users.getProfilePic())
-                        .placeholder(R.drawable.rounded)
-                        .into(userImage_tv);
+        try {
+            userref.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    // This method is called once with the initial value and again
+                    // whenever data at this location is updated.
+                    //String value = dataSnapshot.getValue(String.class);
+                    //Log.d(TAG, "Value is: " + value);
+                    //String value = dataSnapshot.getValue(String.class);
+                    //Toast.makeText(homeActivity.this,value,Toast.LENGTH_SHORT).show();
+                    Users users = dataSnapshot.getValue(Users.class);
+                    Picasso.get().load(users.getProfilePic())
+                            .placeholder(R.drawable.rounded)
+                            .into(toolbarimage);
+                    Picasso.get().load(users.getProfilePic())
+                            .placeholder(R.drawable.rounded)
+                            .into(userImage_tv);
 
-                username_tv.setText(users.getUserName());
+                    username_tv.setText(users.getUserName());
 
 
-            }
+                }
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                //Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    //Log.w(TAG, "Failed to read value.", error.toException());
+                }
+            });
+        }
+        catch(Exception e)
+        {
+
+        }
 
         // Onclick Listner
         heart_cv.setOnClickListener(new View.OnClickListener() {

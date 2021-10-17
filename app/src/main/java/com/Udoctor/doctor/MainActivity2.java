@@ -7,6 +7,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
+import com.Udoctor.doctor.doctorside.DoctorLogin;
+import com.Udoctor.doctor.doctorside.DoctorSignup;
 
 
 public class MainActivity2 extends AppCompatActivity {
@@ -19,24 +21,24 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void statloginPatient(View view) {
 
-        SharedPreferences prefs = getSharedPreferences("IdChoose",MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
+//        SharedPreferences prefs = getSharedPreferences("IdChoose",MODE_PRIVATE);
+//        SharedPreferences.Editor editor = prefs.edit();
 
-        editor.putString("userCategory","Patient");
-        editor.apply();
+//        editor.putString("userCategory","Patient");
+//        editor.apply();
 
         startActivity(new Intent(this,loginActivity.class));
     }
 
-//    public void statloginDoctor(View view) {
-//
+    public void statloginDoctor(View view) {
+
 //        SharedPreferences prefs = getSharedPreferences("IdChoose",MODE_PRIVATE);
 //        SharedPreferences.Editor editor = prefs.edit();
 //
 //        editor.putString("userCategory","Doctor");
 //        editor.apply();
-//
-//
-//        startActivity(new Intent(this,loginActivity.class));
-//    }
+
+
+        startActivity(new Intent(this, DoctorLogin.class));
+    }
 }

@@ -13,13 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Doctor">
         <activity
+            android:name=".doctorside.DoctorProfile"
+            android:exported="true" />
+        <activity
+            android:name=".doctorside.DoctorHome"
+            android:exported="true" />
+        <activity
+            android:name=".doctorside.DoctorLogin"
+            android:exported="true" />
+        <activity
+            android:name=".doctorside.DoctorSignup"
+            android:exported="true" />
+        <activity
             android:name=".DentalActivity"
             android:exported="true" />
         <activity
             android:name=".EyeActivity"
-            android:exported="true" />
-        <activity
-            android:name=".DoctorHome"
             android:exported="true" />
         <activity
             android:name=".HeartActivity"

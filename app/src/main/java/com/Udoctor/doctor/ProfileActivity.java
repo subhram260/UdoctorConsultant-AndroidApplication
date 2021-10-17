@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.Udoctor.doctor.Models.Users;
+import com.firebase.ui.auth.data.remote.ProfileMerger;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -72,10 +73,9 @@ public class ProfileActivity extends AppCompatActivity {
     progressDialog.setTitle("Profile picture");
     progressDialog.setMessage("uploading....");
 
-
+    //from Google Auth
     username.setText(mAuth.getCurrentUser().getDisplayName());
     useremail.setText(mAuth.getCurrentUser().getEmail());
-
     roundedimg.setImageURI(mAuth.getCurrentUser().getPhotoUrl());
     //final StorageReference reference = storage.getReference().child("ProfilePictures").child(FirebaseAuth.getInstance().getUid());
     //roundedimg.setImageURI(reference.child("ProfilePictures").getDownloadUrl().getResult());
@@ -134,15 +134,21 @@ public class ProfileActivity extends AppCompatActivity {
     plusimage.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            intent.setType("image/*");
-            startActivityForResult(intent,33);
-
+           try {
+               Intent intent = new Intent();
+               intent.setAction(Intent.ACTION_GET_CONTENT);
+               intent.setType("image/*");
+               startActivityForResult(intent, 33);
+           }
+           catch (Exception e)
+           {
+               Toast.makeText(ProfileActivity.this, "Profile picture is not selected", Toast.LENGTH_SHORT).show();
+           }
         }
     });
 
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -173,6 +179,10 @@ public class ProfileActivity extends AppCompatActivity {
 
                 }
             });
+        }
+        else
+        {
+
         }
 
     }

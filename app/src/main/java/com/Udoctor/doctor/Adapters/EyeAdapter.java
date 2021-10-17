@@ -1,6 +1,9 @@
 package com.Udoctor.doctor.Adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +13,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.Udoctor.doctor.Details_doctor;
 import com.Udoctor.doctor.R;
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class EyeAdapter extends RecyclerView.Adapter<EyeAdapter.MyViewHolder>{
@@ -34,7 +39,7 @@ public class EyeAdapter extends RecyclerView.Adapter<EyeAdapter.MyViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull EyeAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull EyeAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         EyeDoctor Edoctor = list.get(position);
 //        holder.imageHeart.setImageURI(Hdoctor.getImageHeart().toString());
         Picasso.get().load(Edoctor.getImageEye())
@@ -42,6 +47,18 @@ public class EyeAdapter extends RecyclerView.Adapter<EyeAdapter.MyViewHolder>{
                 .into(holder.imageEye);
         holder.nameEye.setText(Edoctor.getNameEye());
         holder.specialEye.setText(Edoctor.getSpecialEye());
+
+        holder.v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent=new Intent(v.getContext(), Details_doctor.class);
+                intent.putExtra("Edoctor",list.get(position));
+                context.startActivity(intent);
+
+            }
+        });
     }
 
     @Override
@@ -53,7 +70,7 @@ public class EyeAdapter extends RecyclerView.Adapter<EyeAdapter.MyViewHolder>{
 
         ImageView imageEye;
         TextView nameEye,specialEye;
-
+        View v;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -61,6 +78,7 @@ public class EyeAdapter extends RecyclerView.Adapter<EyeAdapter.MyViewHolder>{
             nameEye=itemView.findViewById(R.id.nameItem);
             specialEye=itemView.findViewById(R.id.specialItem);
 
+            v=itemView;
         }
     }
 }
