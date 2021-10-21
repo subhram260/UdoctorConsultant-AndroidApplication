@@ -86,7 +86,7 @@ public class DoctorHome extends AppCompatActivity {
                 //Log.d(TAG, "Value is: " + value);
                 //String value = dataSnapshot.getValue(String.class);
                 //Toast.makeText(homeActivity.this,value,Toast.LENGTH_SHORT).show();
-                StorageReference reference = storage.getReference().child("ProfilePictures").child(FirebaseAuth.getInstance().getUid());
+//                StorageReference reference = storage.getReference().child("ProfilePictures").child(FirebaseAuth.getInstance().getUid());
                 DoctorUser doctorUser = dataSnapshot.getValue(DoctorUser.class);
 //                if(doctorUser.getProfilePic()!=null) {
                     Picasso.get().load(doctorUser.getProfilePic())

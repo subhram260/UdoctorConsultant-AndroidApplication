@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -40,9 +41,16 @@ public class HeartAdapter extends RecyclerView.Adapter<HeartAdapter.MyViewHolder
     public void onBindViewHolder(@NonNull HeartAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         HeartDoctor Hdoctor = list.get(position);
 //        holder.imageHeart.setImageURI(Hdoctor.getImageHeart().toString());
+        try{
         Picasso.get().load(Hdoctor.getImageHeart())
                 .placeholder(R.drawable.rounded)
                 .into(holder.imageHeart);
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(context.getApplicationContext(),e.toString(),Toast.LENGTH_SHORT).show();
+
+        }
         holder.nameHeart.setText(Hdoctor.getNameHeart());
         holder.specialHeart.setText(Hdoctor.getSpecialHeart());
 

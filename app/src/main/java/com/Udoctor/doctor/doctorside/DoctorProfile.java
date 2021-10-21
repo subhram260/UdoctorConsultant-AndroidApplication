@@ -46,6 +46,7 @@ public class DoctorProfile extends AppCompatActivity {
     FirebaseDatabase database;
 
     private boolean editmodebool=false;
+    private String specialization;
 
 
     @Override
@@ -111,6 +112,7 @@ public class DoctorProfile extends AppCompatActivity {
                         useremail.setText(doctorUser.getDoctormail());
                         userphone.setText(doctorUser.getDoctorphone());
                         usergender.setText(doctorUser.getDoctorgender());
+                        specialization=doctorUser.getSpelization();
 
 
                     }
@@ -173,6 +175,22 @@ public class DoctorProfile extends AppCompatActivity {
                         public void onSuccess(Uri uri) {
 
                             database.getReference().child("Doctors").child(FirebaseAuth.getInstance().getUid()).child("profilePic").setValue(uri.toString());
+                            if("Dental Specialist".equals(specialization)) {
+                                database.getReference().child("Dentallist").child(FirebaseAuth.getInstance().getUid()).child("imageDental").setValue(uri.toString());
+                                Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
+
+                            }
+                            if("Eye Specialist".equals(specialization)) {
+                                database.getReference().child("Eyelist").child(FirebaseAuth.getInstance().getUid()).child("imageDental").setValue(uri.toString());
+                                Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
+
+                            }
+                            if("Heart Specialist".equals(specialization)) {
+                                database.getReference().child("Heartlist").child(FirebaseAuth.getInstance().getUid()).child("imageDental").setValue(uri.toString());
+                                Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
+
+                            }
+
                             Toast.makeText(DoctorProfile.this, "Profile picture Uploaded", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
 

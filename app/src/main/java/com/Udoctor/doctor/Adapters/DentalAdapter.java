@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,9 +42,16 @@ public class DentalAdapter extends RecyclerView.Adapter<DentalAdapter.MyViewHold
     public void onBindViewHolder(@NonNull DentalAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         DentalDoctor Ddoctor = list.get(position);
 //        holder.imageHeart.setImageURI(Hdoctor.getImageHeart().toString());
-        Picasso.get().load(Ddoctor.getImageDental())
-                .placeholder(R.drawable.rounded)
-                .into(holder.imageDental);
+        try{
+            Picasso.get().load(Ddoctor.getImageDental())
+                    .placeholder(R.drawable.rounded)
+                    .into(holder.imageDental);
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(context.getApplicationContext(),e.toString(),Toast.LENGTH_SHORT).show();
+
+        }
         holder.nameDental.setText(Ddoctor.getNameDental());
         holder.specialDental.setText(Ddoctor.getSpecialDental());
         holder.v.setOnClickListener(new View.OnClickListener() {

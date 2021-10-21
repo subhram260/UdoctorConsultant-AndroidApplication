@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 //import com.example.doctor.R;
 import com.Udoctor.doctor.Models.Users;
@@ -157,6 +158,8 @@ public class homeActivity extends AppCompatActivity {
                     //String value = dataSnapshot.getValue(String.class);
                     //Toast.makeText(homeActivity.this,value,Toast.LENGTH_SHORT).show();
                     Users users = dataSnapshot.getValue(Users.class);
+                    try {
+
                     Picasso.get().load(users.getProfilePic())
                             .placeholder(R.drawable.rounded)
                             .into(toolbarimage);
@@ -165,7 +168,11 @@ public class homeActivity extends AppCompatActivity {
                             .into(userImage_tv);
 
                     username_tv.setText(users.getUserName());
-
+                }
+                    catch (Exception e)
+                {
+                    Toast.makeText(getApplicationContext(),e.toString(),Toast.LENGTH_SHORT).show();
+                }
 
                 }
 

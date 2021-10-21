@@ -160,7 +160,7 @@ public class DoctorSignup extends AppCompatActivity implements AdapterView.OnIte
                         }
                         else
                         {
-                            Toast.makeText(DoctorSignup.this, "Registering user failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DoctorSignup.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

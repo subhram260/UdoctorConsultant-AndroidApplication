@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -42,9 +43,16 @@ public class EyeAdapter extends RecyclerView.Adapter<EyeAdapter.MyViewHolder>{
     public void onBindViewHolder(@NonNull EyeAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         EyeDoctor Edoctor = list.get(position);
 //        holder.imageHeart.setImageURI(Hdoctor.getImageHeart().toString());
+     try{
         Picasso.get().load(Edoctor.getImageEye())
                 .placeholder(R.drawable.rounded)
                 .into(holder.imageEye);
+    }
+        catch (Exception e)
+    {
+        Toast.makeText(context.getApplicationContext(),e.toString(),Toast.LENGTH_SHORT).show();
+
+    }
         holder.nameEye.setText(Edoctor.getNameEye());
         holder.specialEye.setText(Edoctor.getSpecialEye());
 

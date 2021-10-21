@@ -10,6 +10,7 @@ import android.app.StatusBarManager;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.Udoctor.doctor.Adapters.DentalDoctor;
 import com.Udoctor.doctor.Adapters.EyeDoctor;
@@ -45,9 +46,15 @@ public class Details_doctor extends AppCompatActivity {
 
        try {
            HeartDoctor Hdoctor=getIntent().getParcelableExtra("Hdoctor");
-           Picasso.get().load(Hdoctor.getImageHeart())
-                   .placeholder(R.drawable.rounded)
-                   .into(doctorImage);
+           try {
+               Picasso.get().load(Hdoctor.getImageHeart())
+                       .placeholder(R.drawable.rounded)
+                       .into(doctorImage);
+           }
+           catch (Exception p)
+           {
+               Toast.makeText(getApplicationContext(), p.toString(), Toast.LENGTH_SHORT).show();
+           }
            doctorName.setText(Hdoctor.getNameHeart());
            doctorSpecialization.setText(Hdoctor.getSpecialHeart());
        }catch(Exception e)
@@ -55,9 +62,15 @@ public class Details_doctor extends AppCompatActivity {
       try
       {
           EyeDoctor Edoctor=getIntent().getParcelableExtra("Edoctor");
-          Picasso.get().load(Edoctor.getImageEye())
+       try{
+           Picasso.get().load(Edoctor.getImageEye())
                   .placeholder(R.drawable.rounded)
                   .into(doctorImage);
+      }
+      catch (Exception pp)
+      {
+          Toast.makeText(getApplicationContext(), pp.toString(), Toast.LENGTH_SHORT).show();
+      }
           doctorName.setText(Edoctor.getNameEye());
           doctorSpecialization.setText(Edoctor.getSpecialEye());
       }
@@ -67,9 +80,15 @@ public class Details_doctor extends AppCompatActivity {
        try
       {
           DentalDoctor Ddoctor=getIntent().getParcelableExtra("Ddoctor");
-          Picasso.get().load(Ddoctor.getImageDental())
+         try{
+             Picasso.get().load(Ddoctor.getImageDental())
                   .placeholder(R.drawable.rounded)
                   .into(doctorImage);
+      }
+       catch (Exception ppp)
+       {
+           Toast.makeText(getApplicationContext(), ppp.toString(), Toast.LENGTH_SHORT).show();
+       }
           doctorName.setText(Ddoctor.getNameDental());
           doctorSpecialization.setText(Ddoctor.getSpecialDental());
       }
