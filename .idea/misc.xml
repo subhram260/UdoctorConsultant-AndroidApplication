@@ -5,11 +5,13 @@
       <map>
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/spinner_bg.xml" value="0.29010416666666666" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/tex.xml" value="0.29010416666666666" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_apointment_request.xml" value="0.20315315315315316" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_appointment_request_profile.xml" value="0.21576576576576575" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_demo.xml" value="0.24947916666666667" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_dental.xml" value="0.24947916666666667" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_details_doctor.xml" value="0.25" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_doctor_home.xml" value="0.27395833333333336" />
-        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_doctor_home2.xml" value="0.25885416666666666" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_doctor_home2.xml" value="0.21576576576576575" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_doctor_login.xml" value="0.25885416666666666" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_doctor_profile.xml" value="0.24427083333333333" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_doctor_signup.xml" value="0.27395833333333336" />
@@ -18,6 +20,7 @@
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_home.xml" value="0.27395833333333336" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_login.xml" value="0.25885416666666666" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_main2.xml" value="0.27395833333333336" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_my_apointment.xml" value="0.21576576576576575" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_profile.xml" value="0.25885416666666666" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_signup.xml" value="0.27395833333333336" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/heartitem.xml" value="0.25" />
@@ -30,5 +33,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.25885416666666666" />
+      </ProjectState>
+    </option>
   </component>
 </project>

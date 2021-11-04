@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +36,7 @@ public class ProfileActivity extends AppCompatActivity {
     EditText username,useremail,userphone,usergender,userDOB;
     ProgressDialog progressDialog;
     Uri sFile;
+    String Uid;
 
 
 
@@ -247,6 +249,7 @@ public class ProfileActivity extends AppCompatActivity {
                             userphone.setText(users.getUserphone());
                             usergender.setText(users.getUsergender());
                             userDOB.setText(users.getUserDOB());
+                            Uid=users.getUserid();
 
                         }
 
@@ -268,7 +271,11 @@ public class ProfileActivity extends AppCompatActivity {
 
 
 
-
+//        SharedPreferences prefs = getSharedPreferences("Uid",MODE_PRIVATE);
+//        SharedPreferences.Editor editor = prefs.edit();
+//
+//        editor.putString("Uid",Uid);
+//        editor.apply();
     }
 }
 

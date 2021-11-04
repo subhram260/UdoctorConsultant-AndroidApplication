@@ -1,73 +1,71 @@
 package com.Udoctor.doctor.Adapters;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.Udoctor.doctor.Details_doctor;
 import com.Udoctor.doctor.R;
+import com.Udoctor.doctor.doctorside.AppointmentRequestProfileActivity;
 import com.squareup.picasso.Picasso;
-
 
 import java.util.ArrayList;
 
-public class DentalAdapter extends RecyclerView.Adapter<DentalAdapter.MyViewHolder> {
+public class ApointmentRequestAdapter extends RecyclerView.Adapter<ApointmentRequestAdapter.MyViewHolder>{
 
-    Context context;
-    ArrayList<DentalDoctor> list;
+        Context context;
+        ArrayList<ApointmentRequestClass> list;
 
-    public DentalAdapter(Context context, ArrayList<DentalDoctor> list) {
+    public ApointmentRequestAdapter(Context context, ArrayList<ApointmentRequestClass> list) {
         this.context = context;
         this.list = list;
     }
 
+
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ApointmentRequestAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.item,parent,false);
-        return new MyViewHolder(v);
+        return new ApointmentRequestAdapter.MyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DentalAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        DentalDoctor Ddoctor = list.get(position);
+    public void onBindViewHolder(@NonNull ApointmentRequestAdapter.MyViewHolder holder, int position) {
+        ApointmentRequestClass Appointment = list.get(position);
 //        holder.imageHeart.setImageURI(Hdoctor.getImageHeart().toString());
         try{
-            Picasso.get().load(Ddoctor.getImageDental())
+            Picasso.get().load(Appointment.getPatientImage())
                     .placeholder(R.drawable.rounded)
-                    .into(holder.imageDental);
+                    .into(holder.image);
         }
         catch (Exception e)
         {
             Picasso.get().load(R.drawable.rounded)
                     .placeholder(R.drawable.rounded)
-                    .into(holder.imageDental);
+                    .into(holder.image);
 
         }
-        holder.nameDental.setText(Ddoctor.getNameDental());
-        holder.specialDental.setText(Ddoctor.getSpecialDental());
+        holder.name.setText(Appointment.getPatientName());
+        holder.email.setText(Appointment.getPatientEmail());
+
         holder.v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                Intent intent=new Intent(v.getContext(), Details_doctor.class);
-                intent.putExtra("Ddoctor", list.get(position));
+                Intent intent=new Intent(v.getContext(), AppointmentRequestProfileActivity.class);
+                intent.putExtra("AppointmentpatientDetails", list.get(position));
                 context.startActivity(intent);
 
             }
         });
-
     }
 
     @Override
@@ -77,18 +75,18 @@ public class DentalAdapter extends RecyclerView.Adapter<DentalAdapter.MyViewHold
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView imageDental;
-        TextView nameDental,specialDental;
+        ImageView image;
+        TextView name,email;
         View v;
-
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imageDental=itemView.findViewById(R.id.imageItem);
-            nameDental=itemView.findViewById(R.id.nameItem);
-            specialDental=itemView.findViewById(R.id.specialItem);
+            image=itemView.findViewById(R.id.imageItem);
+            name=itemView.findViewById(R.id.nameItem);
+            email=itemView.findViewById(R.id.specialItem);
 
             v=itemView;
+
         }
     }
 }

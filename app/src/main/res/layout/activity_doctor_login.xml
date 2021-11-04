@@ -59,42 +59,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DLbtn" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView10">-->
 
 
-        <ImageButton
-            android:id="@+id/GINBtn"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:adjustViewBounds="true"
-            android:backgroundTint="#E6F2F2"
-            android:padding="15dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/google" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/GINBtn"-->
+<!--            android:layout_width="64dp"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:backgroundTint="#E6F2F2"-->
+<!--            android:padding="15dp"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            app:srcCompat="@drawable/google" />-->
 
-        <LinearLayout
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"></LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="horizontal"></LinearLayout>-->
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:adjustViewBounds="true"
-            android:backgroundTint="#E6F2F2"
-            android:padding="15dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/facebook" />
-    </LinearLayout>
+<!--        <ImageButton-->
+<!--            android:id="@+id/imageButton2"-->
+<!--            android:layout_width="64dp"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:backgroundTint="#E6F2F2"-->
+<!--            android:padding="15dp"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            app:srcCompat="@drawable/facebook" />-->
+<!--    </LinearLayout>-->
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -162,7 +162,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
 
         <TextView
             android:id="@+id/textView11"
@@ -172,11 +173,11 @@
 
         <TextView
             android:id="@+id/Dregtxtbtn"
-            android:textColor="#4CBBB9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="   Register" />
+            android:text="   Register"
+            android:textColor="#4CBBB9" />
 
     </LinearLayout>
 

@@ -4,20 +4,22 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class DentalDoctor implements Parcelable {
-    String imageDental,nameDental,specialDental;
+    String imageDental,nameDental,specialDental,did;
 
     public DentalDoctor(){};
 
-    public DentalDoctor(String imageDental, String nameDental, String specialDental) {
+    public DentalDoctor(String did,String imageDental, String nameDental, String specialDental) {
         this.imageDental = imageDental;
         this.nameDental = nameDental;
         this.specialDental = specialDental;
+        this.did=did;
     }
 
     protected DentalDoctor(Parcel in) {
         imageDental = in.readString();
         nameDental = in.readString();
         specialDental = in.readString();
+        did = in.readString();
     }
 
     public static final Creator<DentalDoctor> CREATOR = new Creator<DentalDoctor>() {
@@ -56,6 +58,14 @@ public class DentalDoctor implements Parcelable {
         this.specialDental = specialDental;
     }
 
+    public String getDid() {
+        return did;
+    }
+
+    public void setDid(String did) {
+        this.did = did;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -66,5 +76,6 @@ public class DentalDoctor implements Parcelable {
         dest.writeString(imageDental);
         dest.writeString(nameDental);
         dest.writeString(specialDental);
+        dest.writeString(did);
     }
 }

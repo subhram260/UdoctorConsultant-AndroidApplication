@@ -50,7 +50,10 @@ public class EyeAdapter extends RecyclerView.Adapter<EyeAdapter.MyViewHolder>{
     }
         catch (Exception e)
     {
-        Toast.makeText(context.getApplicationContext(),e.toString(),Toast.LENGTH_SHORT).show();
+        Picasso.get().load(R.drawable.rounded)
+                .placeholder(R.drawable.rounded)
+                .into(holder.imageEye);
+//        Toast.makeText(context.getApplicationContext(),e.toString(),Toast.LENGTH_SHORT).show();
 
     }
         holder.nameEye.setText(Edoctor.getNameEye());

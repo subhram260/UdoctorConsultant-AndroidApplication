@@ -5,21 +5,23 @@ import android.os.Parcelable;
 
 public class EyeDoctor implements Parcelable {
 
-    String imageEye,nameEye,specialEye;
+    String imageEye,nameEye,specialEye,did;
 
     public EyeDoctor()
         { }
 
-    public EyeDoctor(String imageEye, String nameEye, String specialEye) {
+    public EyeDoctor(String did,String imageEye, String nameEye, String specialEye) {
         this.imageEye = imageEye;
         this.nameEye = nameEye;
         this.specialEye = specialEye;
+        this.did=did;
     }
 
     protected EyeDoctor(Parcel in) {
         imageEye = in.readString();
         nameEye = in.readString();
         specialEye = in.readString();
+        did = in.readString();
     }
 
     public static final Creator<EyeDoctor> CREATOR = new Creator<EyeDoctor>() {
@@ -58,6 +60,14 @@ public class EyeDoctor implements Parcelable {
         this.specialEye = specialEye;
     }
 
+    public String getDid() {
+        return did;
+    }
+
+    public void setDid(String did) {
+        this.did = did;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -68,6 +78,7 @@ public class EyeDoctor implements Parcelable {
         dest.writeString(imageEye);
         dest.writeString(nameEye);
         dest.writeString(specialEye);
+        dest.writeString(did);
     }
 }
 

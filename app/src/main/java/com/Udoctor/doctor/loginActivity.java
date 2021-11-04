@@ -47,19 +47,6 @@ public class loginActivity extends AppCompatActivity {
     FirebaseDatabase database;
 
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        FirebaseUser user = mAuth.getCurrentUser();
-        if(user!=null)
-        {
-                Intent intent=new Intent(getApplicationContext(),homeActivity.class);
-                startActivity(intent);
-                finish();
-        }
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

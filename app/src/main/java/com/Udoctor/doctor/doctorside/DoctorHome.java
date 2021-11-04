@@ -120,4 +120,8 @@ public class DoctorHome extends AppCompatActivity {
     public void startDoctorprofile(View view) {
         startActivity(new Intent(DoctorHome.this,DoctorProfile.class));
     }
+
+    public void apointment(View view) {
+        startActivity(new Intent(DoctorHome.this,ApointmentRequest.class));
+    }
 }

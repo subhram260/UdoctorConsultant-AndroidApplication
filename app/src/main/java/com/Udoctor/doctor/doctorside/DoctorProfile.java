@@ -181,12 +181,12 @@ public class DoctorProfile extends AppCompatActivity {
 
                             }
                             if("Eye Specialist".equals(specialization)) {
-                                database.getReference().child("Eyelist").child(FirebaseAuth.getInstance().getUid()).child("imageDental").setValue(uri.toString());
+                                database.getReference().child("Eyelist").child(FirebaseAuth.getInstance().getUid()).child("imageEye").setValue(uri.toString());
                                 Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
 
                             }
                             if("Heart Specialist".equals(specialization)) {
-                                database.getReference().child("Heartlist").child(FirebaseAuth.getInstance().getUid()).child("imageDental").setValue(uri.toString());
+                                database.getReference().child("Heartlist").child(FirebaseAuth.getInstance().getUid()).child("imageHeart").setValue(uri.toString());
                                 Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
 
                             }

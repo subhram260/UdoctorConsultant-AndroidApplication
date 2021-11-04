@@ -9,6 +9,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -220,7 +221,24 @@ public class homeActivity extends AppCompatActivity {
             }
         });
 
-
+//        database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+//                .addListenerForSingleValueEvent(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                        Users users = snapshot.getValue(Users.class);
+////                            progressDialog.show();
+//                        SharedPreferences prefs = getSharedPreferences("Uid",MODE_PRIVATE);
+//                        SharedPreferences.Editor editor = prefs.edit();
+//
+//                        editor.putString("Uid",users.getUserid());
+//                        editor.apply();
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                    }
+//                });
 
     }
 

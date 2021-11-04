@@ -124,9 +124,11 @@ public class DoctorSignup extends AppCompatActivity implements AdapterView.OnIte
                             users.setDoctormail(remailtxt);
                             users.setDoctorName(rnametxt);
                             users.setDoctorpassword(rpasstxt);
+                            users.setDid(mAuth.getUid());
 
                             database.getReference().child("Doctors").child(id).setValue(users);
                             database.getReference().child("Doctors").child(id).child("spelization").setValue(_DRspecialization);
+//                            database.getReference().child("Doctors").child(id).child("Did").setValue(users.getDid());
 
                             if(_DRspecialization=="Heart Specialist")
                             {
@@ -135,6 +137,7 @@ public class DoctorSignup extends AppCompatActivity implements AdapterView.OnIte
                                 doctor.setNameHeart(rnametxt);
                                 doctor.setSpecialHeart(_DRspecialization);
                                 database.getReference().child("Heartlist").child(id).setValue(doctor);
+                                database.getReference().child("Heartlist").child(id).child("did").setValue(users.getDid());
                             }
                             if(_DRspecialization=="Eye Specialist")
                             {
@@ -143,6 +146,7 @@ public class DoctorSignup extends AppCompatActivity implements AdapterView.OnIte
                                 doctor.setNameEye(rnametxt);
                                 doctor.setSpecialEye(_DRspecialization);
                                 database.getReference().child("Eyelist").child(id).setValue(doctor);
+                                database.getReference().child("Eyelist").child(id).child("did").setValue(users.getDid());
                             }
                             if(_DRspecialization=="Dental Specialist")
                             {
@@ -151,6 +155,7 @@ public class DoctorSignup extends AppCompatActivity implements AdapterView.OnIte
                                 doctor.setNameDental(rnametxt);
                                 doctor.setSpecialDental(_DRspecialization);
                                 database.getReference().child("Dentallist").child(id).setValue(doctor);
+                                database.getReference().child("Dentallist").child(id).child("did").setValue(users.getDid());
                             }
 
                             Toast.makeText(DoctorSignup.this, "Registering user successfully", Toast.LENGTH_SHORT).show();
@@ -176,7 +181,14 @@ public class DoctorSignup extends AppCompatActivity implements AdapterView.OnIte
     }
     @Override
     public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
-        Toast.makeText(getApplicationContext(), "Selected User: "+users[position] , Toast.LENGTH_SHORT).show();
+        if(users[position].equals("Choose specialization"))
+        {
+
+        }
+        else {
+        Toast.makeText(getApplicationContext(), "Selected Specialization: "+users[position] , Toast.LENGTH_SHORT).show();
+
+        }
         specialization=users[position].toString();
     }
 

@@ -1,31 +1,41 @@
 package com.Udoctor.doctor.Models;
 
 public class DoctorUser {
-    String profilePic, DoctorName, Doctormail, Doctorpassword, Doctorid, Doctorphone, Doctorgender, DoctorEducation, DoctorAboutSummery, DoctorAddress,type,spelization;
+    String Did,profilePic, DoctorName, Doctormail, Doctorpassword, Doctorid, Doctorphone, Doctorgender, DoctorEducation, DoctorAboutSummery, DoctorAddress,type,spelization;
 
 
-    public DoctorUser(String profilePic, String doctorName, String doctormail, String doctorpassword, String doctorid, String doctorphone, String doctorgender, String doctorEducation, String doctorAboutSummery, String doctorAddress, String type, String spelization) {
+    public DoctorUser(String Did,String profilePic, String doctorName, String doctormail, String doctorpassword, String doctorid, String doctorphone, String doctorgender, String doctorEducation, String doctorAboutSummery, String doctorAddress, String type, String spelization) {
         this.profilePic = profilePic;
-        DoctorName = doctorName;
-        Doctormail = doctormail;
-        Doctorpassword = doctorpassword;
-        Doctorid = doctorid;
-        Doctorphone = doctorphone;
-        Doctorgender = doctorgender;
-        DoctorEducation = doctorEducation;
-        DoctorAboutSummery = doctorAboutSummery;
-        DoctorAddress = doctorAddress;
+        this.DoctorName = doctorName;
+        this.Doctormail = doctormail;
+        this.Doctorpassword = doctorpassword;
+        this.Doctorid = doctorid;
+        this.Doctorphone = doctorphone;
+        this.Doctorgender = doctorgender;
+        this.DoctorEducation = doctorEducation;
+        this.DoctorAboutSummery = doctorAboutSummery;
+        this.DoctorAddress = doctorAddress;
         this.type = type;
         this.spelization = spelization;
+        this.Did = Did;
     }
 
     public DoctorUser(){}
 
     //Signup constructor
-    public DoctorUser(String DoctorName, String Doctormail, String Doctorpassword) {
+    public DoctorUser(String Did,String DoctorName, String Doctormail, String Doctorpassword) {
         this.DoctorName = DoctorName;
         this.Doctormail = Doctormail;
         this.Doctorpassword = Doctorpassword;
+        this.Did = Did;
+    }
+
+    public String getDid() {
+        return Did;
+    }
+
+    public void setDid(String did) {
+        Did = did;
     }
 
     public String getType() {

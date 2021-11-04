@@ -204,21 +204,21 @@
                         tools:ignore="ContentDescription,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
 
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal" />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="horizontal" />-->
 
-                <ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="#E6F2F2"
-                    android:padding="15dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/facebook"
-                    tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+<!--                <ImageButton-->
+<!--                    android:id="@+id/imageButton2"-->
+<!--                    android:layout_width="64dp"-->
+<!--                    android:layout_height="64dp"-->
+<!--                    android:adjustViewBounds="true"-->
+<!--                    android:backgroundTint="#E6F2F2"-->
+<!--                    android:padding="15dp"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    app:srcCompat="@drawable/facebook"-->
+<!--                    tools:ignore="ContentDescription,SpeakableTextPresentCheck" />-->
             </LinearLayout>
 
 
