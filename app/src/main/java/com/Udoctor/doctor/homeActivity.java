@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 //import com.example.doctor.R;
 import com.Udoctor.doctor.Models.Users;
+import com.Udoctor.doctor.doctorside.DashboardActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -116,7 +117,8 @@ public class homeActivity extends AppCompatActivity {
                     case R.id.profile:
                         startActivity(new Intent(homeActivity.this,ProfileActivity.class));
                         break;
-                    case R.id.appointment:
+                    case R.id.attendcall:
+                        startActivity(new Intent(homeActivity.this, DashboardActivity.class));
                         break;
                     case R.id.messages:
                          break;

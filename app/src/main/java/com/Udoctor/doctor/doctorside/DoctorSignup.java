@@ -124,7 +124,7 @@ public class DoctorSignup extends AppCompatActivity implements AdapterView.OnIte
                             users.setDoctormail(remailtxt);
                             users.setDoctorName(rnametxt);
                             users.setDoctorpassword(rpasstxt);
-                            users.setDid(mAuth.getUid());
+                            users.setDid(task.getResult().getUser().getUid());
 
                             database.getReference().child("Doctors").child(id).setValue(users);
                             database.getReference().child("Doctors").child(id).child("spelization").setValue(_DRspecialization);

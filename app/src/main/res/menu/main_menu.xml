@@ -11,9 +11,9 @@
             android:icon="@drawable/profile"
             android:title="My Profile" />
         <item
-            android:id="@+id/appointment"
-            android:icon="@drawable/appointment"
-            android:title="My Appointment" />
+            android:id="@+id/attendcall"
+            android:icon="@drawable/videocall"
+            android:title="Attend Video call" />
         <item
             android:id="@+id/messages"
             android:icon="@drawable/messages"

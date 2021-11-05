@@ -3,13 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/button_style_rounded.xml" value="0.12387387387387387" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/home.xml" value="0.17882882882882883" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/ic_name.xml" value="0.17685185185185184" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/spinner_bg.xml" value="0.29010416666666666" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/tex.xml" value="0.29010416666666666" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/textbox.xml" value="0.17685185185185184" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_apointment_request.xml" value="0.20315315315315316" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_appointment_request_profile.xml" value="0.21576576576576575" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_call_login.xml" value="0.1" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_call_sign_up.xml" value="0.21576576576576575" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_call_signup.xml" value="0.1" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_demo.xml" value="0.24947916666666667" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_dental.xml" value="0.24947916666666667" />
-        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_details_doctor.xml" value="0.25" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_details_doctor.xml" value="0.21576576576576575" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_doctor_home.xml" value="0.27395833333333336" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_doctor_home2.xml" value="0.21576576576576575" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_doctor_login.xml" value="0.25885416666666666" />
@@ -23,8 +31,11 @@
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_my_apointment.xml" value="0.21576576576576575" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_profile.xml" value="0.25885416666666666" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/activity_signup.xml" value="0.27395833333333336" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/button_style_rounded.xml" value="0.1" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/heartitem.xml" value="0.25" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/layout/item.xml" value="0.24947916666666667" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/menu/main_menu.xml" value="0.1" />
+        <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/menu/menu.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Doctor" >
         <activity
+            android:name=".doctorside.DashboardActivity"
+            android:exported="false"
+            />
+        <activity
             android:name=".doctorside.AppointmentRequestProfileActivity"
             android:exported="true" />
         <activity

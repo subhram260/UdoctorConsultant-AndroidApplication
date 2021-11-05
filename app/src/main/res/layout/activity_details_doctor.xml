@@ -218,7 +218,7 @@
                                 >
 
                                 <LinearLayout
-                                    android:layout_width="match_parent"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:padding="10dp">
@@ -226,8 +226,8 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:orientation="horizontal"
-                                        android:layout_marginTop="2dp">
+                                        android:layout_marginTop="2dp"
+                                        android:orientation="horizontal">
 
                                         <androidx.cardview.widget.CardView
                                             android:layout_width="wrap_content"
@@ -244,9 +244,9 @@
                                         <LinearLayout
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
-                                            android:orientation="vertical"
                                             android:layout_marginLeft="10dp"
-                                            android:gravity="center">
+                                            android:gravity="center"
+                                            android:orientation="vertical">
 
                                             <TextView
                                                 android:layout_width="match_parent"
@@ -263,8 +263,8 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="10dp"
                                         android:layout_marginBottom="7dp"
-                                        android:maxLines="2"
-                                        android:text="Find the best doctors, consultants and specialist in your town city. Easy " />
+                                        android:maxLines="3"
+                                        android:text="Find the best doctors, consultants and specialist in your town city. Easy to colaborate" />
 
                                 </LinearLayout>
 
@@ -278,7 +278,7 @@
                                 >
 
                                 <LinearLayout
-                                    android:layout_width="match_parent"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:padding="10dp">
@@ -286,8 +286,8 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:orientation="horizontal"
-                                        android:layout_marginTop="2dp">
+                                        android:layout_marginTop="2dp"
+                                        android:orientation="horizontal">
 
                                         <androidx.cardview.widget.CardView
                                             android:layout_width="wrap_content"
@@ -304,9 +304,9 @@
                                         <LinearLayout
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
-                                            android:orientation="vertical"
                                             android:layout_marginLeft="10dp"
-                                            android:gravity="center">
+                                            android:gravity="center"
+                                            android:orientation="vertical">
 
                                             <TextView
                                                 android:layout_width="match_parent"
@@ -323,8 +323,8 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="10dp"
                                         android:layout_marginBottom="7dp"
-                                        android:maxLines="2"
-                                        android:text="Find the best doctors, consultants and specialist in your town city. Easy " />
+                                        android:maxLines="3"
+                                        android:text="Find the best doctors, consultants and specialist in your town city. Easy to colaborate" />
 
                                 </LinearLayout>
 
@@ -338,7 +338,7 @@
                                 >
 
                                 <LinearLayout
-                                    android:layout_width="match_parent"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:padding="10dp">
@@ -346,8 +346,8 @@
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:orientation="horizontal"
-                                        android:layout_marginTop="2dp">
+                                        android:layout_marginTop="2dp"
+                                        android:orientation="horizontal">
 
                                         <androidx.cardview.widget.CardView
                                             android:layout_width="wrap_content"
@@ -364,12 +364,11 @@
                                         <LinearLayout
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
-                                            android:orientation="vertical"
                                             android:layout_marginLeft="10dp"
-                                            android:gravity="center">
+                                            android:gravity="center"
+                                            android:orientation="vertical">
 
                                             <TextView
-                                                android:id="@+id/textView35"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:text="Subhram Patel"
@@ -380,17 +379,17 @@
                                     </LinearLayout>
 
                                     <TextView
-                                        android:id="@+id/textView33"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="10dp"
                                         android:layout_marginBottom="7dp"
-                                        android:maxLines="2"
-                                        android:text="Find the best doctors, consultants and specialist in your town city. Easy " />
+                                        android:maxLines="3"
+                                        android:text="Find the best doctors, consultants and specialist in your town city. Easy to colaborate" />
 
                                 </LinearLayout>
 
                             </androidx.cardview.widget.CardView>
+
 
 
                         </LinearLayout>
@@ -460,7 +459,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="bottom"
                         android:layout_marginTop="30dp"
-                        android:layout_marginBottom="30dp"
+                        android:layout_marginBottom="10dp"
                         android:backgroundTint="@color/deepgreen"
                         android:onClick="bookAppointment"
                         android:capitalize="sentences"
@@ -468,7 +467,20 @@
                         android:text="Book Appointment"
                         android:textAllCaps="false" />
 
-
+                <Button
+                    android:id="@+id/appointmentBooked"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="30dp"
+                    android:backgroundTint="@color/deepgreen"
+                    android:onClick="bookAppointment"
+                    android:capitalize="sentences"
+                    android:padding="15dp"
+                    android:clickable="false"
+                    android:elevation="0dp"
+                    android:text="Appointment Booked!!\nwait for notification"
+                    android:textAllCaps="false" />
 
             </LinearLayout>
         </ScrollView>

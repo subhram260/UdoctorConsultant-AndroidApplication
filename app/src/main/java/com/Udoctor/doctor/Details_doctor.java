@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,7 @@ public class Details_doctor extends AppCompatActivity {
 
     TextView doctorName,doctorSpecialization;
     ImageView doctorImage;
+    Button appointmentBooked;
 
     FirebaseStorage storage;
     FirebaseAuth mAuth;
@@ -53,7 +55,8 @@ public class Details_doctor extends AppCompatActivity {
         doctorName =findViewById(R.id.doctorName);
         doctorSpecialization=findViewById(R.id.doctorSpecialization);
         doctorImage=findViewById(R.id.doctorImage);
-
+        appointmentBooked=findViewById(R.id.appointmentBooked);
+        appointmentBooked.setVisibility(View.GONE);
 
         storage = FirebaseStorage.getInstance();
         mAuth = FirebaseAuth.getInstance();
@@ -176,18 +179,10 @@ public class Details_doctor extends AppCompatActivity {
         ApointmentRequestClass apointmentRequestClass=new ApointmentRequestClass();
         apointmentRequestClass.setPatientName(name);
         apointmentRequestClass.setPatientEmail(email);
-        if(phone!=null)
-        {
-            apointmentRequestClass.setPatientPhone(phone);
-        }
-        else
-        {
-            apointmentRequestClass.setPatientPhone("Phone number not avaliable !!");
-
-        }
-
+        apointmentRequestClass.setPatientPhone(phone);
         apointmentRequestClass.setPatientImage(pic);
         apointmentRequestClass.setPatientGender(gender);
+
 
         database.getReference().child("Doctors").child(Did)
                 .child("AppointmentRequest")
@@ -196,7 +191,9 @@ public class Details_doctor extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(getApplicationContext(),"Appointment Booked successfully",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),"Appointment Booked successfully",Toast.LENGTH_SHORT).show();
+                        appointmentBooked.setVisibility(View.VISIBLE);
+
                     }
                 }
         );
