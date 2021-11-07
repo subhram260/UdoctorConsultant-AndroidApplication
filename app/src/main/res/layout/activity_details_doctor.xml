@@ -468,7 +468,7 @@
                         android:textAllCaps="false" />
 
                 <Button
-                    android:id="@+id/appointmentBooked"
+                    android:id="@+id/message"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="bottom"
@@ -479,7 +479,7 @@
                     android:padding="15dp"
                     android:clickable="false"
                     android:elevation="0dp"
-                    android:text="Appointment Booked!!\nwait for notification"
+                    android:text="Appoinment Booked - See Message"
                     android:textAllCaps="false" />
 
             </LinearLayout>

@@ -4,14 +4,15 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class ApointmentRequestClass implements Parcelable{
-    String PatientName,PatientEmail,PatientPhone,PatientImage,patientGender;
+    String PatientName,PatientEmail,PatientPhone,PatientImage,patientGender,Uid;
 
-    public ApointmentRequestClass(String patientName, String patientEmail, String patientPhone, String patientImage,String patientGender) {
+    public ApointmentRequestClass(String Uid,String patientName, String patientEmail, String patientPhone, String patientImage,String patientGender) {
         this.PatientName = patientName;
         this.PatientEmail = patientEmail;
         this.PatientPhone = patientPhone;
         this.PatientImage = patientImage;
         this.patientGender= patientGender;
+        this.Uid=Uid;
     }
 
     public ApointmentRequestClass() {
@@ -23,6 +24,7 @@ public class ApointmentRequestClass implements Parcelable{
         PatientPhone = in.readString();
         PatientImage = in.readString();
         patientGender = in.readString();
+        Uid = in.readString();
     }
 
     public static final Creator<ApointmentRequestClass> CREATOR = new Creator<ApointmentRequestClass>() {
@@ -77,6 +79,14 @@ public class ApointmentRequestClass implements Parcelable{
         this.patientGender = patientGender;
     }
 
+    public String getUid() {
+        return Uid;
+    }
+
+    public void setUid(String uid) {
+        Uid = uid;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -89,6 +99,7 @@ public class ApointmentRequestClass implements Parcelable{
         dest.writeString(PatientPhone);
         dest.writeString(PatientImage);
         dest.writeString(patientGender);
+        dest.writeString(Uid);
     }
 }
 

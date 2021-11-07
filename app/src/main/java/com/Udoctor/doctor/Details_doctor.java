@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -35,7 +36,7 @@ public class Details_doctor extends AppCompatActivity {
 
     TextView doctorName,doctorSpecialization;
     ImageView doctorImage;
-    Button appointmentBooked;
+    Button message;
 
     FirebaseStorage storage;
     FirebaseAuth mAuth;
@@ -44,6 +45,7 @@ public class Details_doctor extends AppCompatActivity {
     Users users;
     String Did="";
     private String name,pic,email,phone,gender;
+    private String Uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +57,8 @@ public class Details_doctor extends AppCompatActivity {
         doctorName =findViewById(R.id.doctorName);
         doctorSpecialization=findViewById(R.id.doctorSpecialization);
         doctorImage=findViewById(R.id.doctorImage);
-        appointmentBooked=findViewById(R.id.appointmentBooked);
-        appointmentBooked.setVisibility(View.GONE);
+        message=findViewById(R.id.message);
+        message.setVisibility(View.GONE);
 
         storage = FirebaseStorage.getInstance();
         mAuth = FirebaseAuth.getInstance();
@@ -86,6 +88,16 @@ public class Details_doctor extends AppCompatActivity {
            doctorName.setText(Hdoctor.getNameHeart());
            doctorSpecialization.setText(Hdoctor.getSpecialHeart());
            Did= Hdoctor.getDid();
+
+           message.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   Intent intent=new Intent(Details_doctor.this,chatDetailActivity.class);
+                   intent.putExtra("UserProfille", Hdoctor);
+                   startActivity(intent);
+               }
+           });
+
            Toast.makeText(getApplicationContext(),Hdoctor.getDid(),Toast.LENGTH_SHORT).show();
        }catch(Exception e)
        {
@@ -107,7 +119,15 @@ public class Details_doctor extends AppCompatActivity {
           doctorName.setText(Edoctor.getNameEye());
           doctorSpecialization.setText(Edoctor.getSpecialEye());
           Did= Edoctor.getDid();
-          Toast.makeText(getApplicationContext(),Edoctor.getDid(),Toast.LENGTH_SHORT).show();
+          message.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  Intent intent=new Intent(Details_doctor.this,chatDetailActivity.class);
+                  intent.putExtra("UserProfille", Edoctor);
+                  startActivity(intent);
+              }
+          });
+//          Toast.makeText(getApplicationContext(),Edoctor.getDid(),Toast.LENGTH_SHORT).show();
       }
       catch (Exception ee)
       {
@@ -130,7 +150,17 @@ public class Details_doctor extends AppCompatActivity {
           doctorName.setText(Ddoctor.getNameDental());
           doctorSpecialization.setText(Ddoctor.getSpecialDental());
           Did= Ddoctor.getDid();
-          Toast.makeText(getApplicationContext(),Ddoctor.getDid(),Toast.LENGTH_SHORT).show();
+          message.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  Intent intent=new Intent(Details_doctor.this,chatDetailActivity.class);
+                  intent.putExtra("UserProfille", Ddoctor);
+                  startActivity(intent);
+              }
+          });
+//          Toast.makeText(getApplicationContext(),Ddoctor.getDid(),Toast.LENGTH_SHORT).show();
+
+
       }
        catch (Exception eee)
        {
@@ -156,6 +186,7 @@ public class Details_doctor extends AppCompatActivity {
                         email=users.getMail();
                         phone=users.getUserphone();
                         gender=users.getUsergender();
+                        Uid=users.getUserid();
 //                        usergender.setText(users.getUsergender());
 //                        userDOB.setText(users.getUserDOB());
 
@@ -166,6 +197,7 @@ public class Details_doctor extends AppCompatActivity {
 
                     }
                 });
+
     }
 
     @Override
@@ -182,6 +214,7 @@ public class Details_doctor extends AppCompatActivity {
         apointmentRequestClass.setPatientPhone(phone);
         apointmentRequestClass.setPatientImage(pic);
         apointmentRequestClass.setPatientGender(gender);
+        apointmentRequestClass.setUid(Uid);
 
 
         database.getReference().child("Doctors").child(Did)
@@ -192,7 +225,7 @@ public class Details_doctor extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
 //                Toast.makeText(getApplicationContext(),"Appointment Booked successfully",Toast.LENGTH_SHORT).show();
-                        appointmentBooked.setVisibility(View.VISIBLE);
+                        message.setVisibility(View.VISIBLE);
 
                     }
                 }

@@ -120,8 +120,8 @@ public class homeActivity extends AppCompatActivity {
                     case R.id.attendcall:
                         startActivity(new Intent(homeActivity.this, DashboardActivity.class));
                         break;
-                    case R.id.messages:
-                         break;
+//                    case R.id.messages:
+//                         break;
                     case R.id.logoutbtn:
                         mAuth.signOut();
                         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

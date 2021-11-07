@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.Udoctor.doctor" >
+    package="com.Udoctor.doctor">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,11 +11,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Doctor" >
+        android:theme="@style/Theme.Doctor">
+        <activity
+            android:name=".chatDetailActivity"
+            android:exported="true" />
         <activity
             android:name=".doctorside.DashboardActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".doctorside.AppointmentRequestProfileActivity"
             android:exported="true" />
@@ -65,7 +67,7 @@
             android:name=".loginActivity"
             android:exported="true" />
         <activity android:name=".MainActivity2" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

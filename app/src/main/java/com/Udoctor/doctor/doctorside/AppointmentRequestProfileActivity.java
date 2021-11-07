@@ -16,6 +16,7 @@ import com.Udoctor.doctor.Adapters.ApointmentRequestClass;
 import com.Udoctor.doctor.Adapters.HeartDoctor;
 import com.Udoctor.doctor.Details_doctor;
 import com.Udoctor.doctor.R;
+import com.Udoctor.doctor.chatDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.text.BreakIterator;
@@ -23,7 +24,7 @@ import java.text.BreakIterator;
 public class AppointmentRequestProfileActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    ImageButton callBtn;
+    ImageButton callBtn,startMessaging;
 
     ImageView patientImage;
     TextView patientName,patientEmail,patientPhone,patientGender,patientName1,phonetext,gendertext;
@@ -47,6 +48,7 @@ public class AppointmentRequestProfileActivity extends AppCompatActivity {
         phonetext = findViewById(R.id.phonetext);
         gendertext = findViewById(R.id.gendertext);
         callBtn = findViewById(R.id.callbtn);
+        startMessaging = findViewById(R.id.startMessaging);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,13 +91,24 @@ public class AppointmentRequestProfileActivity extends AppCompatActivity {
             patientGender.setVisibility(View.GONE);//makes it disappear
             gendertext.setVisibility(View.GONE);//makes it disappear
         }
-            Toast.makeText(getApplicationContext(), phoneNumber + gender, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), phoneNumber + gender, Toast.LENGTH_SHORT).show();
             callBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(AppointmentRequestProfileActivity.this, DashboardActivity.class));
+                    Intent intent=new Intent(AppointmentRequestProfileActivity.this, DashboardActivity.class);
+                    startActivity(intent);
 
                 }
             });
+
+        startMessaging.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(AppointmentRequestProfileActivity.this, chatDetailActivity.class);
+                intent.putExtra("profile",apointmentRequestClass);
+                startActivity(intent);
+            }
+        });
         }
-    }
+
+}

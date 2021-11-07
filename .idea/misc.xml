@@ -3,6 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Doctor/app/src/main/res/drawable/bg_receiver.xml" value="0.22972972972972974" />
+        <entry key="..\:/Doctor/app/src/main/res/drawable/bg_sender.xml" value="0.22972972972972974" />
+        <entry key="..\:/Doctor/app/src/main/res/layout/activity_apointment_request.xml" value="0.21576576576576575" />
+        <entry key="..\:/Doctor/app/src/main/res/layout/activity_appointment_request_profile.xml" value="0.21576576576576575" />
+        <entry key="..\:/Doctor/app/src/main/res/layout/activity_chat_detail.xml" value="0.21576576576576575" />
+        <entry key="..\:/Doctor/app/src/main/res/layout/activity_dashboard.xml" value="0.21576576576576575" />
+        <entry key="..\:/Doctor/app/src/main/res/layout/activity_details_doctor.xml" value="0.2" />
+        <entry key="..\:/Doctor/app/src/main/res/layout/activity_doctor_home2.xml" value="0.2" />
+        <entry key="..\:/Doctor/app/src/main/res/layout/activity_doctor_profile.xml" value="0.21576576576576575" />
+        <entry key="..\:/Doctor/app/src/main/res/layout/activity_profile.xml" value="0.21576576576576575" />
+        <entry key="..\:/Doctor/app/src/main/res/layout/sample_receiver.xml" value="0.2" />
+        <entry key="..\:/Doctor/app/src/main/res/layout/sample_sender.xml" value="0.72" />
+        <entry key="..\:/Doctor/app/src/main/res/menu/main_menu.xml" value="0.21576576576576575" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/button_style_rounded.xml" value="0.12387387387387387" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/home.xml" value="0.17882882882882883" />
         <entry key="..\:/Minor project/rough/Doctor/app/src/main/res/drawable/ic_name.xml" value="0.17685185185185184" />

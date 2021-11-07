@@ -160,7 +160,7 @@
             />
 
         <ImageButton
-            android:id="@+id/button8"
+            android:id="@+id/startMessaging"
             android:layout_margin="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

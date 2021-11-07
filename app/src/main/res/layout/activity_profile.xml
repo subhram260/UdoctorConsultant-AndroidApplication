@@ -15,29 +15,31 @@
         android:background="@color/deepgreen"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme">
+
         <ImageView
             android:id="@+id/arrow"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/arrow_back"/>
+            android:src="@drawable/arrow_back" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Profile"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            />
+            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/editmode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_margin="10dp"
-            android:src="@drawable/edit"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:onClick="editmode"
-            />
+            android:src="@drawable/edit" />
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout

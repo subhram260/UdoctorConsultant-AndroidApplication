@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.Udoctor.doctor.Adapters.ApointmentRequestAdapter;
 import com.Udoctor.doctor.Adapters.ApointmentRequestClass;
@@ -31,12 +32,26 @@ public class ApointmentRequest extends AppCompatActivity {
     ApointmentRequestAdapter apointmentRequestAdapter;
     ArrayList<ApointmentRequestClass> list;
 
+    Toolbar toolbar4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apointment_request);
 
         getWindow().setStatusBarColor(ContextCompat.getColor(ApointmentRequest.this, R.color.btncol));
+
+
+        toolbar4 = (Toolbar) findViewById(R.id.toolbar4);
+        setSupportActionBar(toolbar4);
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        toolbar4.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 //        toolbar=(Toolbar)findViewById(R.id.tool_bar_heart);
         recyclerView = findViewById(R.id.AppointmentRequestId);

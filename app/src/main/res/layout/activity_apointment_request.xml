@@ -18,6 +18,17 @@
 <!--        tools:layout_editor_absoluteX="1dp"-->
 <!--        tools:layout_editor_absoluteY="81dp" />-->
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Appointment Requests"
+        app:titleTextColor="@color/btncol"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="@drawable/arrow_back"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/AppointmentRequestId"
         android:layout_width="match_parent"
