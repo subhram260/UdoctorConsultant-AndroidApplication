@@ -489,6 +489,7 @@
                             android:text="About Us"
                             android:layout_margin="20dp"
                             android:padding="13dp"
+                            android:onClick="aboutus"
                             android:layout_gravity="center"
                             android:backgroundTint="@color/deepgreen"
                             />

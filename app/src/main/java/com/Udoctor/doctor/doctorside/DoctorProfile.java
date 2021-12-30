@@ -177,17 +177,17 @@ public class DoctorProfile extends AppCompatActivity {
                             database.getReference().child("Doctors").child(FirebaseAuth.getInstance().getUid()).child("profilePic").setValue(uri.toString());
                             if("Dental Specialist".equals(specialization)) {
                                 database.getReference().child("Dentallist").child(FirebaseAuth.getInstance().getUid()).child("imageDental").setValue(uri.toString());
-                                Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
 
                             }
                             if("Eye Specialist".equals(specialization)) {
                                 database.getReference().child("Eyelist").child(FirebaseAuth.getInstance().getUid()).child("imageEye").setValue(uri.toString());
-                                Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
 
                             }
                             if("Heart Specialist".equals(specialization)) {
                                 database.getReference().child("Heartlist").child(FirebaseAuth.getInstance().getUid()).child("imageHeart").setValue(uri.toString());
-                                Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getApplicationContext(), "if+"+specialization, Toast.LENGTH_SHORT).show();
 
                             }
 

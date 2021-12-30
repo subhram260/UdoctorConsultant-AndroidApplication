@@ -27,6 +27,7 @@
         app:title="Appointment Requests"
         app:titleTextColor="@color/btncol"
         android:theme="?attr/actionBarTheme"
+        android:backgroundTint="@color/deepgreen"
         app:navigationIcon="@drawable/arrow_back"/>
 
     <androidx.recyclerview.widget.RecyclerView

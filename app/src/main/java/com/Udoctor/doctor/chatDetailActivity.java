@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -47,10 +48,15 @@ public class chatDetailActivity extends AppCompatActivity {
     private String receiverId;
     private String senderId;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_detail);
+
+//        //
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
         //statusbar color
         getWindow().setStatusBarColor(ContextCompat.getColor(chatDetailActivity.this, R.color.deepgreen));
@@ -155,8 +161,8 @@ public class chatDetailActivity extends AppCompatActivity {
             LinearLayoutManager layoutManager = new LinearLayoutManager(this);
             chatRecyclarView.setLayoutManager(layoutManager);
 
-            Toast.makeText(getApplicationContext(), mAuth.getCurrentUser().getUid().toString(), Toast.LENGTH_SHORT).show();
-            Toast.makeText(getApplicationContext(), receiverId, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), mAuth.getCurrentUser().getUid().toString(), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), receiverId, Toast.LENGTH_SHORT).show();
             final String senderRoom = mAuth.getCurrentUser().getUid() + receiverId;
             final String receiverRoom = receiverId + mAuth.getCurrentUser().getUid();
 

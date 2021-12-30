@@ -98,7 +98,7 @@ public class Details_doctor extends AppCompatActivity {
                }
            });
 
-           Toast.makeText(getApplicationContext(),Hdoctor.getDid(),Toast.LENGTH_SHORT).show();
+//           Toast.makeText(getApplicationContext(),Hdoctor.getDid(),Toast.LENGTH_SHORT).show();
        }catch(Exception e)
        {
       try

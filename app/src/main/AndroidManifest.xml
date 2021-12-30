@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Doctor">
         <activity
+            android:name=".AboutUs"
+            android:exported="true" />
+        <activity
             android:name=".chatDetailActivity"
             android:exported="true" />
         <activity

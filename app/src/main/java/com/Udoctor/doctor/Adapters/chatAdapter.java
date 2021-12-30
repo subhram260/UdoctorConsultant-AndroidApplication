@@ -14,6 +14,7 @@ import com.Udoctor.doctor.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class chatAdapter extends RecyclerView.Adapter{
 
@@ -66,9 +67,11 @@ public class chatAdapter extends RecyclerView.Adapter{
         if(holder.getClass() == SenderViewHolder.class)
         {
             ((SenderViewHolder)holder).senderMsg.setText(messageModel.getMessage());
+            ((SenderViewHolder)holder).senderTime.setText(String.valueOf(TimeUnit.MILLISECONDS.toMinutes(messageModel.getTimestamp())));
         }
         else {
             ((ReceiverViewHolder)holder).receiverMsg.setText(messageModel.getMessage());
+            ((ReceiverViewHolder)holder).receiverTime.setText(String.valueOf(TimeUnit.MILLISECONDS.toMinutes(messageModel.getTimestamp())));
         }
 
     }

@@ -270,4 +270,8 @@ public class homeActivity extends AppCompatActivity {
         finish();
 
     }
+
+    public void aboutus(View view) {
+        startActivity(new Intent(homeActivity.this,AboutUs.class));
+    }
 }
